@@ -1,0 +1,16 @@
+<table border=".5"style="width:100%" *ngIf="employees">
+  <tr>
+    <th>Id</th>
+    <th>EmployeeName</th>
+    <th>Email</th>
+    <th>Phone</th>
+  </tr>
+  <tr *ngFor="let employee of employees">
+    <td>{{employee.id}}</td>
+    <td>{{employee.name}}</td>
+    <td>{{employee.email}}</td>
+    <td>{{employee.phone}}</td>
+  <td><button type="button" class="btn btn-info" (click)="onEdit(employee)">Edit</button>
+     <button type="button" class="btn btn-danger" (click)="onDelete(employee.id)">Delete</button></td>
+  </tr>
+  </table>
